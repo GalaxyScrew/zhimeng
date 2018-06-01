@@ -1,4 +1,5 @@
 <?php
+    //RemoveXSS的小解读
     function RemoveXSS($val) {
        $val = preg_replace('/([\x00-\x08,\x0b-\x0c,\x0e-\x19])/', '', $val);
        //根据W3C的标准，以上16进制的字符是不被允许出现在XML文件中
